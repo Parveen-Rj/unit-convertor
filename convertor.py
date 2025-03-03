@@ -1,4 +1,4 @@
-#Project 01: Unit converter
+#Project 01: Unit convertor
 #Build a Google Unit Convertor using python and Streamlit:
 
 import streamlit as st
@@ -61,7 +61,7 @@ st.markdown(
 )
 
 #title and description:
-st.markdown("<h1> Unit Convertor using Python and Streamlit </h1>", unsafe_allow_html=True)
+st.markdown("<h1> Unit Converter using Python and Streamlit </h1>", unsafe_allow_html=True)
 st.write("Easily convert between different units of length , weight, and temperature.")
 
 #sidebar menu
@@ -71,33 +71,33 @@ col1, col2 = st.columns(2)
 
 if conversion_type == "Length":
     with col1:
-        from_unit = st.selectbox("From",["Meters", "Kilograms", "Centimeters","Milimeters","Miles","Yards","Inches","Feet"])
+        from_unit = st.selectbox("From",["Meters", "Kilometers", "Centimeters","Milimeters","Miles","Yards","Inches","Feet"])
     with col2:
-        to_unit = st.selectbox("To",["Meters", "Kilograms", "Centimeters","Milimeters","Miles","Yards","Inches","Feet"])
+        to_unit = st.selectbox("To",["Meters", "Kilometers", "Centimeters","Milimeters","Miles","Yards","Inches","Feet"])
 
-elif Conversion_type == "Weight":
+elif conversion_type == "Weight":
     with col1:
-        from_unit = st.selectbox("From", ["Kilogram", "Grams", "Miligrams","Pounds","Ounces"])
+        from_unit = st.selectbox("From", ["Kilogram", "Grams", "Milligrams","Pounds","Ounces"])
     with col2:
-        to_unit = st.selectbox("To",["Kilogram", "Grams", "Miligrams","Pounds","Ounces"])
-elif Conversion_type == "Temprature":
+        to_unit = st.selectbox("To",["Kilogram", "Grams", "Milligrams","Pounds","Ounces"])
+elif conversion_type == "Temperature":
     with col1:
-        from_unit = st.selectbox("From", ["Celsis","Frhrenheit","Kelvin"])
+        from_unit = st.selectbox("From", ["Celsius","Fahrenheit","Kelvin"])
     with col2:
-        to_unit = st.selectbox("To",["Celsis","Frhrenheit","Kelvin" ])
+        to_unit = st.selectbox("To",["Celsius","Fahrenheit","Kelvin" ])
 
        
 #converted function
-def length_convertor(value, from_unit, to_unit):
+def length_converter(value, from_unit, to_unit):
     length_units = {
-        'Meters': 1, 'Kilometers': 0.001, 'Centirmeters': 100, 'Millimeters':1000,
+        'Meters': 1, 'Kilometers': 0.001, 'Centimeters': 100, 'Millimeters':1000,
          'Miles': 0.000621371, 'Yards': 1.09361, 'Feet': 3.28, 'Inches': 39.37 
     }
     return (value / length_units[from_unit]) * length_units[to_unit]
 
 def weight_converter(value, from_unit, to_unit):
     weight_units = {
-        'Kilogram': 1, 'Grams': 1000, 'Miligrams': 1000000, 'Pounds': 2.2046, 'Ounces': 35.27
+        'Kilogram': 1, 'Grams': 1000, 'Milligrams': 1000000, 'Pounds': 2.2046, 'Ounces': 35.27
     }
     return (value / weight_units[from_unit]) * weight_units[to_unit]
 def temp_converter(value,from_unit, to_unit):
@@ -115,7 +115,7 @@ if st.button("😀Convert"):
         result = length_converter(value, from_unit, to_unit)
     elif conversion_type == "Weigth":
         result = weight_converter(value,from_unit, to_unit)
-    elif Conversion_type == "Temperature":
+    elif conversion_type == "Temperature":
         result = temp_converter(value, from_unit, to_unit)
 
     st.markdown(f"<div class='result-box'>{value} {from_unit} = {result:4f} {to_unit}</div>", unsafe_allow_html=True)
