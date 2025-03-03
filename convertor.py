@@ -65,7 +65,7 @@ st.markdown("<h1> Unit Converter using Python and Streamlit </h1>", unsafe_allow
 st.write("Easily convert between different units of length , weight, and temperature.")
 
 #sidebar menu
-conversion_type = st.sidebar.selectbox("Choose Conversion Type", ["Length", "Weight","Temprature"])
+conversion_type = st.sidebar.selectbox("Choose Conversion Type", ["Length", "Weight","Temperature"])
 value = st.number_input("Entry Value", value=0.0,min_value=0.0, step=0.1)
 col1, col2 = st.columns(2)
 
