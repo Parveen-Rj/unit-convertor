@@ -25,7 +25,7 @@ st.markdown(
     
     }
     .stButton>button {
-        background: liner-gradient(45deg, #0b5394, #351c75);
+        background: linear-gradient(45deg, #0b5394, #351c75);
         color: black;
         font-size: 18px;
         padding:10 px 20px;
@@ -37,21 +37,21 @@ st.markdown(
     .stButton>button:hover {
         transform: scale(1.05);
         background: linear-gradient(45deg, #92fe9d, #00c9ff);
-        cilor: black;
+        color: black;
     }
     .result-box {
         font-size 20px;
-        font=-weight: bold;
+        font-weight: bold;
         text-align: center;
         background: rgba(255, 255, 255, 0.1);
         padding: 25px;
         border-radius:10px;
         marging-top:20px;
-        box-shadow: opx 5px 15px rgba(0, 201, 255, 0.3);
+        box-shadow: 0px 5px 15px rgba(0, 201, 255, 0.3);
     }
     .footer{
         text-align:center;
-        marging-top: 50px;
+        margin-top: 50px;
         font-size: 14px;
         color:black
     }
@@ -113,7 +113,7 @@ def temp_converter(value,from_unit, to_unit):
 if st.button("😀Convert"):
     if conversion_type == "Length":
         result = length_converter(value, from_unit, to_unit)
-    elif conversion_type == "Weigth":
+    elif conversion_type == "Weight":
         result = weight_converter(value,from_unit, to_unit)
     elif conversion_type == "Temperature":
         result = temp_converter(value, from_unit, to_unit)
