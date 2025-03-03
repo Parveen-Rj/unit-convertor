@@ -1,4 +1,4 @@
-#Project 01: Unit convertor
+#Project 01: Unit converter
 #Build a Google Unit Convertor using python and Streamlit:
 
 import streamlit as st
@@ -95,12 +95,12 @@ def length_convertor(value, from_unit, to_unit):
     }
     return (value / length_units[from_unit]) * length_units[to_unit]
 
-def weight_convertor(value, from_unit, to_unit):
+def weight_converter(value, from_unit, to_unit):
     weight_units = {
         'Kilogram': 1, 'Grams': 1000, 'Miligrams': 1000000, 'Pounds': 2.2046, 'Ounces': 35.27
     }
     return (value / weight_units[from_unit]) * weight_units[to_unit]
-def temp_convertor(value,from_unit, to_unit):
+def temp_converter(value,from_unit, to_unit):
     if from_unit == "Celsius":
         return (value * 9/5 +32) if to_unit == "Fahrenheit" else value + 273.15 if to_unit == "Kelvin" else value
     elif from_unit == "Fahrenheit":
@@ -112,12 +112,12 @@ def temp_convertor(value,from_unit, to_unit):
 #button for conversion
 if st.button("😀Convert"):
     if conversion_type == "Length":
-        result = length_convertor(value, from_unit, to_unit)
+        result = length_converter(value, from_unit, to_unit)
     elif conversion_type == "Weigth":
-        result = weight_convertor(value,from_unit, to_unit)
+        result = weight_converter(value,from_unit, to_unit)
     elif Conversion_type == "Temperature":
-        result = temp_convertor(value, from_unit, to_unit)
+        result = temp_converter(value, from_unit, to_unit)
 
     st.markdown(f"<div class='result-box'>{value} {from_unit} = {result:4f} {to_unit}</div>", unsafe_allow_html=True)
-st.markdown("<div class='footer'>Created with love by Parveen Malik </div>", unsafe_allow_html=True)
+st.markdown("<div class='footer'>Created with love ❤️ by Parveen Malik </div>", unsafe_allow_html=True)
 
