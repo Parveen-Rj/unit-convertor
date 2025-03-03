@@ -90,7 +90,7 @@ elif Conversion_type == "Temprature":
 #converted function
 def length_convertor(value, from_unit, to_unit):
     length_units = {
-        'Meters': 1, 'Kilograms': 0.001, 'Centirmeters': 100, 'Millimeters':1000,
+        'Meters': 1, 'Kilometers': 0.001, 'Centirmeters': 100, 'Millimeters':1000,
          'Miles': 0.000621371, 'Yards': 1.09361, 'Feet': 3.28, 'Inches': 39.37 
     }
     return (value / length_units[from_unit]) * length_units[to_unit]
@@ -119,5 +119,5 @@ if st.button("😀Convert"):
         result = temp_convertor(value, from_unit, to_unit)
 
     st.markdown(f"<div class='result-box'>{value} {from_unit} = {result:4f} {to_unit}</div>", unsafe_allow_html=True)
-st.markdown("<div class='footer'>Created with love by Parveen Malik /div>", unsafe_allow_html=True)
+st.markdown("<div class='footer'>Created with love by Parveen Malik </div>", unsafe_allow_html=True)
 
