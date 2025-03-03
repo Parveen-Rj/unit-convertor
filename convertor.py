@@ -118,6 +118,6 @@ if st.button("😀Convert"):
     elif conversion_type == "Temperature":
         result = temp_converter(value, from_unit, to_unit)
 
-    st.markdown(f"<div class='result-box'>{value} {from_unit} = {result:4f} {to_unit}</div>", unsafe_allow_html=True)
+    st.markdown(f"<div class='result-box'>{value} {from_unit} = {result:.4f} {to_unit}</div>", unsafe_allow_html=True)
 st.markdown("<div class='footer'>Created with love ❤️ by Parveen Malik </div>", unsafe_allow_html=True)
 
