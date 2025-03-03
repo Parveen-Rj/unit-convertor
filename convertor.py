@@ -46,7 +46,7 @@ st.markdown(
         background: rgba(255, 255, 255, 0.1);
         padding: 25px;
         border-radius:10px;
-        marging-top:20px;
+        margin-top:20px;
         box-shadow: 0px 5px 15px rgba(0, 201, 255, 0.3);
     }
     .footer{
